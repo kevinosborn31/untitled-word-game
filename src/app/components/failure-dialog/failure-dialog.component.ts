@@ -35,8 +35,9 @@ export class FailureDialogComponent implements OnInit {
   }
 
   public copyResults(): void {
-    const copiedResults = `My secret word was ${this.secretWord} My guesses were: ${this.previousGuesses}`;
-    navigator.clipboard.writeText(copiedResults);
+    const copiedText = `My secret word was ${this.secretWord} My guesses were: ${this.previousGuesses}`;
+    alert(`Copied text: ${copiedText}`)
+    navigator.clipboard.writeText(copiedText);
   }
 
 }
