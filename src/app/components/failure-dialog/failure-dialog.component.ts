@@ -13,6 +13,7 @@ import { TimerService } from 'src/app/services/timer.service';
 export class FailureDialogComponent implements OnInit {
   secretWord: string = "";
   timeSpent: string = "";
+  previousGuesses: [];
 
   constructor(
     private timerService: TimerService,
@@ -34,7 +35,7 @@ export class FailureDialogComponent implements OnInit {
   }
 
   public copyResults(): void {
-    const copiedResults = "";
+    const copiedResults = `My secret word was ${this.secretWord} My guesses were: ${this.previousGuesses}`;
     navigator.clipboard.writeText(copiedResults);
   }
 
