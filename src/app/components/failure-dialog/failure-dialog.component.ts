@@ -33,4 +33,9 @@ export class FailureDialogComponent implements OnInit {
     this.dialogRef.close(true);
   }
 
+  public copyResults(): void {
+    const copiedResults = "";
+    navigator.clipboard.writeText(copiedResults);
+  }
+
 }
